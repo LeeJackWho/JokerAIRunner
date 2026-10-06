@@ -1,8 +1,10 @@
 # 钉钉配置信息
-# 技术群
-# DING_WEBHOOK_URL = "https://oapi.dingtalk.com/robot/send?access_token=67a6952a2be6d06832745acc7fa81e4332d68f9ea01de31c3d35a015a1a98c0d"
-# DING_SECRET = "SEC6020e97270931d1d1ff42b4b7506a5db0baaf43221740f0b211b2f5ec27d947d"
+# 敏感凭据一律从环境变量读取，禁止在代码仓库中提交真实 access_token / 加签密钥。
+# 本地使用方式（示例）：
+#   export DING_WEBHOOK_URL="https://oapi.dingtalk.com/robot/send?access_token=<你的token>"
+#   export DING_SECRET="<你的加签密钥>"
+import os
 
-# pp测试群
-DING_WEBHOOK_URL = "https://oapi.dingtalk.com/robot/send?access_token=c4432ec60cedee9d0a3279875412e873ff7a914f857d8bebac2228ae416498eb"
-DING_SECRET = "SEC0ead8f914ec5a4b1c2bdb642fa767ae95fcc9d79dd0ddabbf135f6b9476cad94"
+# pp测试群（占位，真实值走环境变量）
+DING_WEBHOOK_URL = os.getenv("DING_WEBHOOK_URL", "https://oapi.dingtalk.com/robot/send?access_token=<YOUR_ACCESS_TOKEN>")
+DING_SECRET = os.getenv("DING_SECRET", "<YOUR_SIGN_SECRET>")
