@@ -1,6 +1,6 @@
 android:
   launch: https://www.joker.pw
-  deviceId: "10.130.9.30:40803"
+  deviceId: "<内网地址>:40803"
 
 tasks:
   - name: 打开第一个工具

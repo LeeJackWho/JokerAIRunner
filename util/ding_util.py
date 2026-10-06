@@ -48,7 +48,7 @@ def send_ding_msg():
         logging.warning('未获取到测试执行结果')
 
     # allure远程在线报告地址
-    allure_report_url = f"http://10.130.9.31:10086/{get_today_date()}/index.html"
+    allure_report_url = f"http://<内网地址>:10086/{get_today_date()}/index.html"
     # 发送报告内容
     text = f"用例通过率：{case_rate}%" \
            f"\n执行用例数：{case_all}个" \
